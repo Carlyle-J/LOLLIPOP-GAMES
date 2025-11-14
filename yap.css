@@ -1,0 +1,115 @@
+/* Background blur overlay */
+
+/* Modal container */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  background: #1c1c1c;
+  padding: 30px;
+  border-radius: 10px;
+  width: 320px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  z-index: 1000;
+  display: none;
+  color: white;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  opacity: 0;
+}
+
+.modal.show {
+  display: block;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Modal content */
+.modal-content input, 
+.modal-content button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.modal-content button {
+  background: gold;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.modal-content button:hover {
+  background: #ffd633;
+}
+
+.modal-content a {
+  color: gold;
+  text-decoration: none;
+}
+.modal-content a:hover {
+  text-decoration: underline;
+}
+/*FOOTER STYLES
+.footer{
+  border-top: 1px solid rgba(255, 215, 0, 0.2); /* subtle gold line */
+ /* margin-top: 3em;
+  background-color:#181818;
+}
+.waysToPay{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3em;
+}
+.paycons{
+  border-radius: 10px;
+  width: 50px;
+}
+#paymentMethods{
+  text-align: center;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  color: #ffd700;
+}
+.info-div{
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8em;
+  margin-top:2.5em;
+  text-align:center;
+  gap:0.2em;
+}
+.info-div h5{
+  color:#ffd700;
+}
+.info-div img{
+  width: 100%;
+}
+.popimage{
+  width:10%;
+}
+.pop{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  gap:6em;
+}
+.lollipopfooter{
+  gap:0.8em;
+}
+.info-div a{
+  text-decoration: none;
+  color:inherit;
+}
+.pvt{
+  text-align:center;
+  font-size:0.7em;
+  background: linear-gradient(to bottom, #B8860B, #DAA520, #FFD700, #DAA520, #B8860B);
+  color:black;
+  margin-top:1.5em;
+}*/
+

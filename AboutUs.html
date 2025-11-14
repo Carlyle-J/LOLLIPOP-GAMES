@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - LOLLIPOP GAMES</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!--CSS attachments-->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+
+   <style>
+<style>
+.faq-item:hover .faq-question {
+  color: black;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.faq-answer {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  transition: all 0.3s ease;
+  padding-top: 0;
+}
+
+.faq-answer.show {
+  padding-top: 10px;
+}
+
+.faq-icon {
+  transition: transform 0.3s ease;
+}
+
+.faq-icon.active {
+  transform: rotate(180deg);
+}
+</style>
+
+</style>
+
+</head>
+<body>
+    <header class="header-container">
+        <div class="container-fluid py-3">
+            <div class="row align-items-center">
+                <!-- Logo -->
+                <div class="col-md-2 col-6">
+                    <a href="index.html" style="text-decoration: none"><div class="logo-container bounce-in">
+                        <div class="fs-5">LOLLIPOP</div>
+                        <div class="fs-6">GAMES</div>
+                    </div>
+                  </a>
+                </div>
+                
+                <!-- Navigation Sections -->
+                <div class="col-md-6 d-none d-md-flex justify-content-center nav-sections">
+                    <div class="dropdown">
+      <button class="nav-section dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"> Games</button>
+      <ul class="dropdown-menu dropdown-menu-dark">
+        <li><a class="dropdown-item" href="playstation.html">Playstation</a></li>
+        <li><a class="dropdown-item" href="nintendo.html">Nintendo</a></li>
+        <li><a class="dropdown-item" href="xbox.html">Xbox</a></li>
+      </ul>
+  </div>
+
+                    <a href="pccomponents.html" class="nav-section">PC <br>Components</a>
+                    <a href="consoles.html" class="nav-section">Consoles</a>
+                    <a href="accessories.html" class="nav-section">Accessories</a>
+                    <a href="AboutUs.html" class="nav-section">About <br>Us</a>
+                </div>
+                
+                <!-- Icons -->
+                <div class="col-md-4 col-6 d-flex justify-content-end align-items-center">
+                    <a href="#" class="icon-btn">
+                        <i class="bi bi-search"></i>
+                    </a>
+                    <a href="#" class="icon-btn" id="userIcon">
+                        <i class="bi bi-person"  ></i>
+                    </a>
+                    <a href="cart.html" class="icon-btn position-relative">
+                        <i class="bi bi-cart3"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+                    </a>
+                    <a href="wishlist.html" class="icon-btn position-relative">
+                        <i class="bi bi-heart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">5</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-particles">
+            <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+            <div class="particle" style="left: 20%; animation-delay: 1s;"></div>
+            <div class="particle" style="left: 30%; animation-delay: 2s;"></div>
+            <div class="particle" style="left: 40%; animation-delay: 3s;"></div>
+            <div class="particle" style="left: 50%; animation-delay: 4s;"></div>
+            <div class="particle" style="left: 60%; animation-delay: 5s;"></div>
+            <div class="particle" style="left: 70%; animation-delay: 0.5s;"></div>
+            <div class="particle" style="left: 80%; animation-delay: 1.5s;"></div>
+            <div class="particle" style="left: 90%; animation-delay: 2.5s;"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title pulse-animation">LOLLIPOP GAMES</h1>
+            <p class="hero-subtitle">Crafting Sweet Gaming Experiences Since 2004</p>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="500">445437</span>
+                        <div class="stat-label">Games Sold</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="50">432467</span>
+                        <div class="stat-label">Game Titles</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="98">656789</span>
+                        <div class="stat-label">Customer Satisfaction</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="24">867543</span>
+                        <div class="stat-label">Support Hours</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+        <!-- Timeline Section -->
+        <section class="timeline-section">
+            <div class="timeline-line"></div>
+            
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <i class="fas fa-eye vision-icon"></i>
+                    <h3 class="vision-title">Our Vision</h3>
+                    <p class="vision-text">
+                        To become the world's leading gaming platform that brings joy, excitement, and memorable experiences to players of all ages. We envision a future where gaming transcends boundaries and creates lasting connections between people across the globe.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <i class="fas fa-bullseye vision-icon"></i>
+                    <h3 class="vision-title">Our Mission</h3>
+                    <p class="vision-text">
+                        We are dedicated to creating innovative, high-quality games and gaming accessories that inspire creativity, foster community, and deliver unparalleled entertainment. Our mission is to make gaming accessible, enjoyable, and rewarding for everyone.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <i class="fas fa-heart vision-icon"></i>
+                    <h3 class="vision-title">Our Values</h3>
+                    <p class="vision-text">
+                        Innovation drives us forward, quality defines our products, and community is at the heart of everything we do. We believe in ethical gaming practices, sustainable development, and creating inclusive experiences that welcome players from all walks of life.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <i class="fas fa-rocket vision-icon"></i>
+                    <h3 class="vision-title">Our Future</h3>
+                    <p class="vision-text">
+                        Looking ahead, we're committed to pushing the boundaries of gaming technology, exploring virtual and augmented reality experiences, and building a sustainable gaming ecosystem that benefits players, developers, and communities worldwide.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+ <!-- FAQ Section -->
+<section class="faq-section">
+  <div class="container">
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+
+    <div class="accordion" id="faqAccordion">
+      
+      <div class="faq-item">
+        <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+          What makes LOLLIPOP GAMES different from other gaming companies?
+          <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div id="faq1" class="collapse faq-answer" data-bs-parent="#faqAccordion">
+          We focus on creating games that are not just entertaining but also meaningful. Our unique approach combines cutting-edge technology with heartfelt storytelling, ensuring every game we produce creates lasting memories and genuine connections between players.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+          Do you offer international shipping for gaming accessories?
+          <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div id="faq2" class="collapse faq-answer" data-bs-parent="#faqAccordion">
+          Yes! We ship our premium gaming accessories worldwide. We partner with reliable shipping companies to ensure your orders arrive safely and quickly, no matter where you are. Free shipping is available for orders over $75.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+          What platforms do your games support?
+          <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div id="faq3" class="collapse faq-answer" data-bs-parent="#faqAccordion">
+          Our games are available across multiple platforms including PC, PlayStation, Xbox, Nintendo Switch, and mobile devices. We believe gaming should be accessible to everyone, regardless of their preferred platform.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+          How can I join the LOLLIPOP GAMES community?
+          <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div id="faq4" class="collapse faq-answer" data-bs-parent="#faqAccordion">
+          Join our vibrant community through our social media channels, Discord server, and official forums. We regularly host gaming tournaments, community events, and exclusive previews for our most dedicated fans.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+          Do you offer customer support for technical issues?
+          <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div id="faq5" class="collapse faq-answer" data-bs-parent="#faqAccordion">
+          Absolutely! Our dedicated support team is available 24/7 to help with any technical issues, account problems, or general inquiries. You can reach us through live chat, email, or phone support.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="contact-title">Contact Us</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="contact-card" onclick="window.open('https://maps.google.com', '_blank')">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <div class="contact-info">
+                            <strong>Visit Our Store</strong><br>
+                            123 Gaming Street<br>
+                            Digital City, DC 12345
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-card" onclick="window.location.href='mailto:info@lollipopgames.com'">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <div class="contact-info">
+                            <strong>Email Us</strong><br>
+                            info@lollipopgames.com<br>
+                            support@lollipopgames.com
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-card" onclick="window.location.href='tel:+15551234567'">
+                        <i class="fas fa-phone contact-icon"></i>
+                        <div class="contact-info">
+                            <strong>Call Us</strong><br>
+                            (555) 123-4567<br>
+                            24/7 Support Available
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- LOGIN MODAL -->
+          <div id="blur-overlay"></div>
+<div class="modal" id="loginModal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+
+    <h2>Login</h2>
+    <div class="emptyDiv"></div>
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button id="loginBtn">Login</button>
+    <p>Don't have an account? <a href="#" id="openSignup">Sign up</a></p>
+  </div>
+
+</div>
+
+<!-- SIGNUP MODAL -->
+<div class="modal" id="signupModal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>Sign Up</h2>
+    <div class="emptyDiv"></div>
+    <input class="textBox" type="text" placeholder="First Name">
+    <input class="textBox" type="text" placeholder="Last Name">
+    <input class="textBox" type="email" placeholder="Email">
+    <input class="textBox" type="password" placeholder="Password">
+    <input class="textBox" type="password" placeholder="Confirm Password">
+    <button>Sign Up</button>
+    <p>Already have an account? <a href="#" id="openLogin">Login</a></p>
+  </div>
+</div>
+
+    
+  <!-- Footer -->
+    <footer class="footer-container">
+        <div class="container">
+            <div class="row">
+                <!-- Help Section -->
+                <div class="col-md-4 mb-4">
+                    <div class="footer-section">
+                        <h5 class="footer-title">Help</h5>
+                        <a href="#" class="footer-link">Customer Support</a>
+                        <a href="#" class="footer-link">FAQ</a>
+                        <a href="#" class="footer-link">Troubleshooting</a>
+                        <a href="#" class="footer-link">Game Guides</a>
+                        <a href="#" class="footer-link">System Requirements</a>
+                        <a href="#" class="footer-link">Download Center</a>
+                        <a href="#" class="footer-link">Account Management</a>
+                    </div>
+                </div>
+                
+                <!-- Contact Info Section -->
+                <div class="col-md-4 mb-4">
+                    <div class="footer-section">
+                        <h5 class="footer-title">Contact Info</h5>
+                        <div class="text-white">
+                            <p><i class="bi bi-geo-alt me-2 text-warning"></i>123 Gaming Street<br>Game City, GC 12345</p>
+                            <p><i class="bi bi-telephone me-2 text-warning"></i>+1 (555) 123-4567</p>
+                            <p><i class="bi bi-envelope me-2 text-warning"></i>info@lollipopgames.com</p>
+                            <p><i class="bi bi-clock me-2 text-warning"></i>Mon-Fri: 9AM-9PM<br>Weekends: 10AM-6PM</p>
+                            <div class="d-flex gap-3 mt-3">
+                                <a href="#" class="text-warning"><i class="bi bi-facebook fs-4"></i></a>
+                                <a href="#" class="text-warning"><i class="bi bi-twitter fs-4"></i></a>
+                                <a href="#" class="text-warning"><i class="bi bi-instagram fs-4"></i></a>
+                                <a href="#" class="text-warning"><i class="bi bi-youtube fs-4"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Legal and Privacy Section -->
+                <div class="col-md-4 mb-4">
+                    <div class="footer-section">
+                        <h5 class="footer-title">Legal and Privacy</h5>
+                        <a href="#" class="footer-link">Terms of Service</a>
+                        <a href="#" class="footer-link">Privacy Policy</a>
+                        <a href="#" class="footer-link">Cookie Policy</a>
+                        <a href="#" class="footer-link">GDPR Compliance</a>
+                        <a href="#" class="footer-link">Refund Policy</a>
+                        <a href="#" class="footer-link">Age Rating Guide</a>
+                        <a href="#" class="footer-link">Accessibility</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <div class="border-top border-warning pt-4">
+                        <p class="text-white">&copy; 2025 LOLLIPOP GAMES. All rights reserved.</p>
+                        <p class="text-warning">Premium Gaming Experience Since 2004</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+// FAQ icon rotation using Bootstrap events
+document.addEventListener('DOMContentLoaded', () => {
+  const faqSections = document.querySelectorAll('.faq-item');
+
+  faqSections.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const icon = item.querySelector('.faq-icon');
+    const collapseElement = document.querySelector(question.getAttribute('data-bs-target'));
+    const bsCollapse = new bootstrap.Collapse(collapseElement, { toggle: false });
+
+    collapseElement.addEventListener('show.bs.collapse', () => {
+      icon.classList.add('active');
+      question.classList.add('active');
+    });
+
+    collapseElement.addEventListener('hide.bs.collapse', () => {
+      icon.classList.remove('active');
+      question.classList.remove('active');
+    });
+  });
+});
+
+
+        // Animated Counter for Stats
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current) + (target === 98 ? '%' : target === 24 ? '/7' : 'K+');
+            }, 20);
+        }
+
+        // Intersection Observer for Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target.classList.contains('stat-number')) {
+                        const target = parseInt(entry.target.dataset.target);
+                        animateCounter(entry.target, target);
+                    }
+                    
+                    if (entry.target.classList.contains('timeline-item')) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Initialize Observers
+        document.addEventListener('DOMContentLoaded', function() {
+            // Observe stat numbers
+            document.querySelectorAll('.stat-number').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Observe timeline items
+            document.querySelectorAll('.timeline-item').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Add smooth scrolling to all anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Add parallax effect to hero section
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const parallax = document.querySelector('.hero-section');
+                const speed = scrolled * 0.5;
+                parallax.style.backgroundPosition = `center ${speed}px`;
+            });
+
+            // Add hover effects to navigation
+            const navSections = document.querySelectorAll('.nav-section');
+            navSections.forEach(section => {
+                section.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-2px)';
+                });
+                section.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+
+            // Add floating animation to particles
+            const particles = document.querySelectorAll('.particle');
+            particles.forEach((particle, index) => {
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+            });
+        });
+
+        // Add scroll-triggered animations
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset;
+            
+            // Fade in elements on scroll
+            document.querySelectorAll('.timeline-content, .contact-card').forEach(el => {
+                const elementTop = el.offsetTop;
+                const elementVisible = 150;
+                
+                if (scrollTop > (elementTop - window.innerHeight + elementVisible)) {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }
+            });
+        });
+         const blurOverlay = document.getElementById("blur-overlay");
+     const blurOverlay = document.getElementById("blur-overlay");
+const loginModal = document.getElementById("loginModal");
+const signupModal = document.getElementById("signupModal");
+const userIcon = document.getElementById("userIcon");
+const openSignupLink = document.getElementById("openSignup");
+const openLoginLink = document.getElementById("openLogin");
+const closeButtons = document.querySelectorAll(".close-btn");
+
+// Function to open modal
+function openModal(modal) {
+  blurOverlay.style.display = "block";
+  modal.classList.add("show");
+}
+
+// Function to close all modals
+function closeModals() {
+  blurOverlay.style.display = "none";
+  loginModal.classList.remove("show");
+  signupModal.classList.remove("show");
+}
+
+// Open login modal when clicking user icon
+userIcon.addEventListener("click", () => openModal(loginModal));
+
+// Switch to signup modal
+openSignupLink.addEventListener("click", (e) => {
+  e.preventDefault();
+  closeModals();
+  openModal(signupModal);
+});
+
+// Switch back to login modal
+openLoginLink.addEventListener("click", (e) => {
+  e.preventDefault();
+  closeModals();
+  openModal(loginModal);
+});
+
+// Close modals when clicking blur overlay
+blurOverlay.addEventListener("click", closeModals);
+
+// Close modals when clicking any close button
+closeButtons.forEach(btn => {
+  btn.addEventListener("click", closeModals);
+});
+
+const loginBtn = document.getElementById("loginBtn");
+
+loginBtn.addEventListener("click", () => {
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
+
+  if (email === "admin" && password === "12345") {
+    window.location.href = "productmanagament.html";
+  } else {
+    alert("Invalid username or password.");
+  }
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+ :root {
+            --gold: #FFD700;
+            --yellow: #FFC107;
+            --amber: #FF8F00;
+            --black: #000000;
+            --dark-gray: #212529;
+            --light-yellow: #FFF8E1;
+
+        }
+
+        body {
+            background: linear-gradient(135deg, #FFF8E1 0%, #FFECB3 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .header-gradient {
+            background: linear-gradient(90deg, var(--black) 0%, var(--yellow) 50%, var(--amber) 100%);
+        }
+
+        .logo-box {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--amber) 100%);
+            border: 2px solid var(--yellow);
+        }
+
+        .btn-primary-custom {
+            background: linear-gradient(90deg, var(--yellow) 0%, var(--amber) 100%);
+            border: 2px solid var(--amber);
+            color: var(--black);
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary-custom:hover {
+            background: linear-gradient(90deg, var(--amber) 0%, #E65100 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 193, 7, 0.4);
+        }
+
+        .search-input {
+            border: 2px solid var(--yellow);
+            border-radius: 8px;
+        }
+
+        .search-input:focus {
+            border-color: var(--amber);
+            box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+        }
+
+        .table-header {
+            background: linear-gradient(90deg, #FFF3E0 0%, #FFE0B2 100%);
+        }
+
+        .table-hover tbody tr:hover {
+            background-color: #FFF8E1;
+        }
+
+        .badge-rpg { background-color: #E1BEE7; color: #4A148C; }
+        .badge-racing { background-color: #FFCDD2; color: #B71C1C; }
+        .badge-puzzle { background-color: #BBDEFB; color: #0D47A1; }
+        .badge-action { background-color: #FFE0B2; color: #E65100; }
+        .badge-strategy { background-color: #C8E6C9; color: #1B5E20; }
+        .badge-adventure { background-color: #C5CAE9; color: #283593; }
+        .badge-sports { background-color: #DCEDC8; color: #33691E; }
+        .badge-simulation { background-color: #F8BBD9; color: #880E4F; }
+        .badge-fighting { background-color: #FFCCBC; color: #BF360C; }
+
+        .badge-in-stock { background-color: #C8E6C9; color: #1B5E20; }
+        .badge-low-stock { background-color: #FFF3E0; color: #E65100; }
+        .badge-out-stock { background-color: #FFCDD2; color: #B71C1C; }
+
+        .card-custom {
+            border: 1px solid var(--yellow);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-custom {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--amber) 100%);
+            color: black;
+            border-radius: 12px;
+        }
+
+        .modal-header-custom {
+            background: linear-gradient(90deg, #FFF3E0 0%, #FFE0B2 100%);
+            border-bottom: 2px solid var(--yellow);
+        }
+
+        .form-control:focus {
+            border-color: var(--amber);
+            box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+        }
+
+        .avatar-placeholder {
+            width: 48px;
+            height: 48px;
+            background-color: var(--gold);
+            color: var(--black);
+            border: 2px solid var(--yellow);
+        }
+        .adminny{
+            margin-left:35em;
+        }
+
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 1.5rem !important;
+            }
+            
+            .logo-text {
+                font-size: 0.9rem !important;
+            }
+        }

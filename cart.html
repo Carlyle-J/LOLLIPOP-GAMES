@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!--CSS attachments-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+  <header class="header-container">
+        <div class="container-fluid py-3">
+            <div class="row align-items-center">
+                <!-- Logo -->
+                <div class="col-md-2 col-6">
+                    <a href="index.html" style="text-decoration: none"><div class="logo-container bounce-in">
+                        <div class="fs-5">LOLLIPOP</div>
+                        <div class="fs-6">GAMES</div>
+                    </div>
+                  </a>
+                </div>
+                
+                <!-- Navigation Sections -->
+                <div class="col-md-6 d-none d-md-flex justify-content-center nav-sections">
+                    <div class="dropdown">
+      <button class="nav-section dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"> Games</button>
+      <ul class="dropdown-menu dropdown-menu-dark">
+        <li><a class="dropdown-item" href="playstation.html">Playstation</a></li>
+        <li><a class="dropdown-item" href="nintendo.html">Nintendo</a></li>
+        <li><a class="dropdown-item" href="xbox.html">Xbox</a></li>
+      </ul>
+  </div>
+
+                    <a href="pccomponents.html" class="nav-section">PC <br>Components</a>
+                    <a href="consoles.html" class="nav-section">Consoles</a>
+                    <a href="accessories.html" class="nav-section">Accessories</a>
+                    <a href="AboutUs.html" class="nav-section">About <br>Us</a>
+                </div>
+                
+                <!-- Icons -->
+                <div class="col-md-4 col-6 d-flex justify-content-end align-items-center">
+                    <a href="#" class="icon-btn">
+                        <i class="bi bi-search"></i>
+                    </a>
+                    <a href="#" class="icon-btn" id="userIcon">
+                        <i class="bi bi-person"  ></i>
+                    </a>
+                    <a href="cart.html" class="icon-btn position-relative">
+                        <i class="bi bi-cart3"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+                    </a>
+                    <a href="wishlist.html" class="icon-btn position-relative">
+                        <i class="bi bi-heart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">5</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+          
+    <!-- Main Content -->
+    <div class="container main-content">
+        <h2 class="heading">My Cart</h2>
+        
+        <div class="row">
+            <!-- Cart Items -->
+            <div class="col-lg-8">
+                <div id="cart-items">
+                    <!-- Cart items will be dynamically generated here -->
+                </div>
+                
+                <!-- Empty Cart Message (hidden by default) -->
+                <div id="empty-cart" class="empty-cart" style="display: none;">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>Your cart is empty</h3>
+                    <p>Add some games to get started!</p>
+                    <a href="index.html" class="continue-shopping-btn">Continue Shopping</a>
+                </div>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="col-lg-4">
+                <div class="order-summary">
+                    <h4>Order Information</h4>
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Tax:</span>
+                        <span id="tax">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping:</span>
+                        <span id="shipping">Free</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total:</span>
+                        <span id="total">$0.00</span>
+                    </div>
+                    <button class="place-order-btn" onclick="placeOrder()">Place Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+ <!-- Footer -->
+    <!-- Payment Options Section -->
+        <div class="payment-container fade-in">
+            <h2 class="section-title">Payment Options</h2>
+            <p class="text-white mb-4">We accept all major payment methods for your convenience</p>
+            <div class="payment-icons">
+                <div class="payment-icon">
+                    <i class="bi bi-credit-card me-2"></i>Visa
+                </div>
+                <div class="payment-icon">
+                    <i class="bi bi-credit-card me-2"></i>Mastercard
+                </div>
+                <div class="payment-icon">
+                    <i class="bi bi-paypal me-2"></i>PayPal
+                </div>
+                <div class="payment-icon">
+                    <i class="bi bi-apple me-2"></i>Apple Pay
+                </div>
+                <div class="payment-icon">
+                    <i class="bi bi-google me-2"></i>Google Pay
+                </div>
+                <div class="payment-icon">
+                    <i class="bi bi-currency-bitcoin me-2"></i>Bitcoin
+                </div>
+                <div class="payment-icon">
+                    <i class="bi bi-bank me-2"></i>Bank Transfer
+                </div>
+            </div>
+          </div>
+
+<!-- LOGIN MODAL -->
+          <div id="blur-overlay"></div>
+<div class="modal" id="loginModal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+
+    <h2>Login</h2>
+    <div class="emptyDiv"></div>
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button>Login</button>
+    <p>Don't have an account? <a href="#" id="openSignup">Sign up</a></p>
+  </div>
+
+</div>
+
+<!-- SIGNUP MODAL -->
+<div class="modal" id="signupModal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>Sign Up</h2>
+    <div class="emptyDiv"></div>
+    <input class="textBox" type="text" placeholder="First Name">
+    <input class="textBox" type="text" placeholder="Last Name">
+    <input class="textBox" type="email" placeholder="Email">
+    <input class="textBox" type="password" placeholder="Password">
+    <input class="textBox" type="password" placeholder="Confirm Password">
+    <button>Sign Up</button>
+    <p>Already have an account? <a href="#" id="openLogin">Login</a></p>
+  </div>
+</div>
+  <!-- Footer -->
+    <footer class="footer-container">
+        <div class="container">
+            <div class="row">
+                <!-- Help Section -->
+                <div class="col-md-4 mb-4">
+                    <div class="footer-section">
+                        <h5 class="footer-title">Help</h5>
+                        <a href="#" class="footer-link">Customer Support</a>
+                        <a href="#" class="footer-link">FAQ</a>
+                        <a href="#" class="footer-link">Troubleshooting</a>
+                        <a href="#" class="footer-link">Game Guides</a>
+                        <a href="#" class="footer-link">System Requirements</a>
+                        <a href="#" class="footer-link">Download Center</a>
+                        <a href="#" class="footer-link">Account Management</a>
+                    </div>
+                </div>
+                
+                <!-- Contact Info Section -->
+                <div class="col-md-4 mb-4">
+                    <div class="footer-section">
+                        <h5 class="footer-title">Contact Info</h5>
+                        <div class="text-white">
+                            <p><i class="bi bi-geo-alt me-2 text-warning"></i>123 Gaming Street<br>Game City, GC 12345</p>
+                            <p><i class="bi bi-telephone me-2 text-warning"></i>+1 (555) 123-4567</p>
+                            <p><i class="bi bi-envelope me-2 text-warning"></i>info@lollipopgames.com</p>
+                            <p><i class="bi bi-clock me-2 text-warning"></i>Mon-Fri: 9AM-9PM<br>Weekends: 10AM-6PM</p>
+                            <div class="d-flex gap-3 mt-3">
+                                <a href="#" class="text-warning"><i class="bi bi-facebook fs-4"></i></a>
+                                <a href="#" class="text-warning"><i class="bi bi-twitter fs-4"></i></a>
+                                <a href="#" class="text-warning"><i class="bi bi-instagram fs-4"></i></a>
+                                <a href="#" class="text-warning"><i class="bi bi-youtube fs-4"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Legal and Privacy Section -->
+                <div class="col-md-4 mb-4">
+                    <div class="footer-section">
+                        <h5 class="footer-title">Legal and Privacy</h5>
+                        <a href="#" class="footer-link">Terms of Service</a>
+                        <a href="#" class="footer-link">Privacy Policy</a>
+                        <a href="#" class="footer-link">Cookie Policy</a>
+                        <a href="#" class="footer-link">GDPR Compliance</a>
+                        <a href="#" class="footer-link">Refund Policy</a>
+                        <a href="#" class="footer-link">Age Rating Guide</a>
+                        <a href="#" class="footer-link">Accessibility</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <div class="border-top border-warning pt-4">
+                        <p class="text-white">&copy; 2025 LOLLIPOP GAMES. All rights reserved.</p>
+                        <p class="text-warning">Premium Gaming Experience Since 2004</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ <script>
+function renderCartItems() {
+  const cartContainer = document.getElementById('cart-items');
+  const emptyCart = document.getElementById('empty-cart');
+  const subtotalElem = document.getElementById('subtotal');
+  const taxElem = document.getElementById('tax');
+  const totalElem = document.getElementById('total');
+
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  // Clear old content
+  cartContainer.innerHTML = '';
+
+  if (cart.length === 0) {
+    emptyCart.style.display = 'block';
+    cartContainer.style.display = 'none';
+    subtotalElem.textContent = '$0.00';
+    taxElem.textContent = '$0.00';
+    totalElem.textContent = '$0.00';
+    return;
+  }
+
+  emptyCart.style.display = 'none';
+  cartContainer.style.display = 'block';
+
+  let subtotal = 0;
+
+  cart.forEach((item, index) => {
+    const priceValue = parseFloat(item.price.replace(/[^\d.]/g, '')) || 0;
+
+    subtotal += priceValue;
+
+    const itemHTML = `
+      <div class="cart-item d-flex align-items-center mb-3 border-bottom pb-3">
+        <img src="${item.image}" alt="${item.name}" class="me-3" style="width:80px; height:80px; object-fit:cover;">
+        <div class="flex-grow-1">
+          <h5>${item.name}</h5>
+          <p>${item.price}</p>
+        </div>
+        <button class="btn btn-danger btn-sm" onclick="removeItem(${index})">Remove</button>
+      </div>
+    `;
+    cartContainer.innerHTML += itemHTML;
+  });
+
+  const tax = subtotal * 0.05; // 5% tax example
+  const total = subtotal + tax;
+
+  subtotalElem.textContent = `$${subtotal.toFixed(2)}`;
+  taxElem.textContent = `$${tax.toFixed(2)}`;
+  totalElem.textContent = `$${total.toFixed(2)}`;
+}
+
+function removeItem(index) {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cart.splice(index, 1);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  renderCartItems();
+}
+
+function placeOrder() {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  if (cart.length === 0) {
+    alert('Your cart is empty!');
+    return;
+  }
+  alert('Order placed successfully! Thank you for shopping with LOLLIPOP GAMES!');
+  localStorage.removeItem('cart');
+  renderCartItems();
+}
+
+document.addEventListener('DOMContentLoaded', renderCartItems);
+</script>
+
+</body>
+</html>

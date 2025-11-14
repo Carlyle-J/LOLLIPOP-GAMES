@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOLLIPOP GAMES - Add Product</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="admin.css" rel="stylesheet">
+    
+    <style>
+        .btn-primary-custom {
+            background: linear-gradient(90deg, var(--yellow) 0%, var(--amber) 100%);
+            border: 2px solid var(--amber);
+            color: var(--black);
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary-custom:hover {
+            background: linear-gradient(90deg, var(--amber) 0%, #E65100 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 193, 7, 0.4);
+            color: var(--black);
+        }
+
+        .btn-outline-custom {
+            border: 2px solid var(--yellow);
+            color: var(--amber);
+            background: transparent;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-custom:hover {
+            background-color: var(--light-yellow);
+            border-color: var(--amber);
+            color: var(--amber);
+        }
+
+        .form-control, .form-select {
+            border: 2px solid #6c757d;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus, .form-select:focus {
+            border-color: var(--amber);
+            box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+        }
+
+        .card-custom {
+            border: 2px solid var(--black);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .avatar-placeholder {
+            width: 48px;
+            height: 48px;
+            background-color: var(--gold);
+            color: var(--black);
+            border: 2px solid var(--yellow);
+        }
+
+        .upload-area {
+            border: 2px dashed #6c757d;
+            border-radius: 12px;
+            background-color: #f8f9fa;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .upload-area:hover {
+            border-color: var(--amber);
+            background-color: var(--light-yellow);
+        }
+
+        .upload-area.dragover {
+            border-color: var(--amber);
+            background-color: var(--light-yellow);
+        }
+
+        .image-preview {
+            max-width: 200px;
+            max-height: 200px;
+            border: 2px solid var(--yellow);
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 1.5rem !important;
+            }
+            
+            .logo-text {
+                font-size: 0.9rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid px-4 py-4">
+        <!-- Header -->
+        <header class="header-gradient p-4 rounded-3 shadow-lg mb-4">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                    <!-- Logo -->
+                    <a href="index.html" style="text-decoration: none">
+                    <div class="logo-box p-3 rounded-3 shadow me-4">
+                        <div class="logo-text fw-bold text-black">LOLLIPOP</div>
+                        <div class="logo-text fw-bold text-black" style="font-size: 0.8rem;">GAMES</div>
+                    </div>
+                    </a>
+                    <!-- Title -->
+                    <div class="text-white">
+                        <h1 class="header-title fw-bold mb-1">Product Management</h1>
+                    </div>
+                </div>
+
+                <!-- User Avatar -->
+                <div class="d-flex align-items-center">
+                    <div class="text-end me-3 d-none d-sm-block">
+                        <p class="text-white mb-0 small">Admin User</p>
+                        <p class="mb-0" style="color: #FFF3E0; font-size: 0.75rem;">Administrator</p>
+                    </div>
+                    <div class="avatar-placeholder rounded-circle d-flex align-items-center justify-content-center">
+                        <i class="bi bi-person-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Back Button -->
+        <div class="mb-4">
+            <a href="index.html" class="btn btn-outline-custom">
+                <i class="bi bi-arrow-left me-2"></i>Back to Products
+            </a>
+        </div>
+        <div class="mb-4">
+            <a href="productmanagament.html" class="btn btn-outline-custom">
+                <i class="bi bi-arrow-left me-2"></i>Product Manipulation
+            </a>
+        </div>
+
+        <!-- Main Form -->
+        <div class="card-custom bg-white p-4 mb-4">
+            <form id="addProductForm">
+                <div class="row">
+                    <!-- Left Column -->
+                    <div class="col-lg-6 mb-4">
+                        <!-- Product Name -->
+                        <div class="mb-3">
+                            <label for="productName" class="form-label fw-semibold text-dark">Product Name</label>
+                            <input type="text" class="form-control" id="productName" placeholder="Enter product name">
+                            <div class="invalid-feedback" id="nameError"></div>
+                        </div>
+
+                        <!-- Category -->
+                        <div class="mb-3">
+                            <label for="productCategory" class="form-label fw-semibold text-dark">Category</label>
+                            <select class="form-select" id="productCategory">
+                                <option value="">Select a category</option>
+                                <option value="RPG">RPG</option>
+                                <option value="Racing">Racing</option>
+                                <option value="Puzzle">Puzzle</option>
+                                <option value="Action">Action</option>
+                                <option value="Strategy">Strategy</option>
+                                <option value="Adventure">Adventure</option>
+                                <option value="Sports">Sports</option>
+                                <option value="Simulation">Simulation</option>
+                                <option value="Fighting">Fighting</option>
+                            </select>
+                            <div class="invalid-feedback" id="categoryError"></div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="col-lg-6 mb-4">
+                        <!-- Price -->
+                        <div class="mb-3">
+                            <label for="productPrice" class="form-label fw-semibold text-dark">Price</label>
+                            <input type="number" class="form-control" id="productPrice" step="0.01" min="0" placeholder="0.00">
+                            <div class="invalid-feedback" id="priceError"></div>
+                        </div>
+
+                        <!-- Stock Quantity -->
+                        <div class="mb-3">
+                            <label for="productStock" class="form-label fw-semibold text-dark">Stock Quantity</label>
+                            <input type="number" class="form-control" id="productStock" min="0" placeholder="0">
+                            <div class="invalid-feedback" id="stockError"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Full Width Sections -->
+                <!-- Product Description -->
+                <div class="mb-4">
+                    <label for="productDescription" class="form-label fw-semibold text-dark">Product Description</label>
+                    <textarea class="form-control" id="productDescription" rows="4" placeholder="Enter product description..."></textarea>
+                </div>
+
+                <!-- Upload Image -->
+                <div class="mb-4">
+                    <label class="form-label fw-semibold text-dark">Upload Image</label>
+                    <div class="upload-area p-5 text-center" id="uploadArea" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);" ondragenter="dragEnterHandler(event);" ondragleave="dragLeaveHandler(event);">
+                        <div id="uploadContent">
+                            <i class="bi bi-cloud-upload display-4 text-muted mb-3"></i>
+                            <p class="mb-2">
+                                <span class="text-warning fw-semibold">Click to upload</span>
+                                <span class="text-muted"> or drag and drop</span>
+                            </p>
+                            <p class="text-muted small">PNG, JPG, GIF up to 10MB</p>
+                            <input type="file" id="imageInput" accept="image/*" style="display: none;" onchange="handleImageUpload(event)">
+                            <button type="button" class="btn btn-outline-warning" onclick="document.getElementById('imageInput').click()">
+                                Choose File
+                            </button>
+                        </div>
+                        <div id="imagePreview" class="d-none">
+                            <img id="previewImage" class="image-preview mb-3" alt="Preview">
+                            <br>
+                            <button type="button" class="btn btn-outline-danger btn-sm" onclick="removeImage()">
+                                <i class="bi bi-trash me-1"></i>Remove Image
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary-custom btn-lg px-5 me-3">
+                        <i class="bi bi-check-circle me-2"></i>Save Product
+                    </button>
+                    <a href="index.html" class="btn btn-primary-custom btn-lg px-5">
+                        <i class="bi bi-x-circle me-2"></i>Cancel
+                    </a>
+                </div>
+            </form>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer-custom p-4 text-center">
+            <p class="mb-0">&copy; 2024 LOLLIPOP GAMES. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        let selectedImage = null;
+
+        // Image upload handlers
+        function handleImageUpload(event) {
+            const file = event.target.files[0];
+            if (file) {
+                if (file.size > 10 * 1024 * 1024) {
+                    alert('File size must be less than 10MB');
+                    return;
+                }
+                
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    selectedImage = e.target.result;
+                    showImagePreview(e.target.result);
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function showImagePreview(src) {
+            document.getElementById('uploadContent').classList.add('d-none');
+            document.getElementById('imagePreview').classList.remove('d-none');
+            document.getElementById('previewImage').src = src;
+        }
+
+        function removeImage() {
+            selectedImage = null;
+            document.getElementById('uploadContent').classList.remove('d-none');
+            document.getElementById('imagePreview').classList.add('d-none');
+            document.getElementById('imageInput').value = '';
+        }
+
+        // Drag and drop handlers
+        function dragOverHandler(ev) {
+            ev.preventDefault();
+        }
+
+        function dragEnterHandler(ev) {
+            ev.preventDefault();
+            document.getElementById('uploadArea').classList.add('dragover');
+        }
+
+        function dragLeaveHandler(ev) {
+            ev.preventDefault();
+            document.getElementById('uploadArea').classList.remove('dragover');
+        }
+
+        function dropHandler(ev) {
+            ev.preventDefault();
+            document.getElementById('uploadArea').classList.remove('dragover');
+            
+            const files = ev.dataTransfer.files;
+            if (files.length > 0) {
+                const file = files[0];
+                if (file.type.startsWith('image/')) {
+                    if (file.size > 10 * 1024 * 1024) {
+                        alert('File size must be less than 10MB');
+                        return;
+                    }
+                    
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        selectedImage = e.target.result;
+                        showImagePreview(e.target.result);
+                    };
+                    reader.readAsDataURL(file);
+                }
+            }
+        }
+
+        // Form validation
+        function validateForm() {
+            const name = document.getElementById('productName').value.trim();
+            const category = document.getElementById('productCategory').value;
+            const price = parseFloat(document.getElementById('productPrice').value);
+            const stock = parseInt(document.getElementById('productStock').value);
+            
+            let isValid = true;
+            clearErrors();
+
+            if (!name) {
+                showError('productName', 'nameError', 'Product name is required');
+                isValid = false;
+            }
+
+            if (!category) {
+                showError('productCategory', 'categoryError', 'Category is required');
+                isValid = false;
+            }
+
+            if (isNaN(price) || price <= 0) {
+                showError('productPrice', 'priceError', 'Please enter a valid price');
+                isValid = false;
+            }
+
+            if (isNaN(stock) || stock < 0) {
+                showError('productStock', 'stockError', 'Please enter a valid stock amount');
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        function showError(inputId, errorId, message) {
+            const input = document.getElementById(inputId);
+            const error = document.getElementById(errorId);
+            input.classList.add('is-invalid');
+            error.textContent = message;
+        }
+
+        function clearErrors() {
+            const inputs = ['productName', 'productCategory', 'productPrice', 'productStock'];
+            const errors = ['nameError', 'categoryError', 'priceError', 'stockError'];
+            
+            inputs.forEach(id => {
+                document.getElementById(id).classList.remove('is-invalid');
+            });
+            
+            errors.forEach(id => {
+                document.getElementById(id).textContent = '';
+            });
+        }
+
+        // Form submission
+        document.getElementById('addProductForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (!validateForm()) {
+                return;
+            }
+
+            const productData = {
+                name: document.getElementById('productName').value.trim(),
+                category: document.getElementById('productCategory').value,
+                price: parseFloat(document.getElementById('productPrice').value),
+                stock: parseInt(document.getElementById('productStock').value),
+                description: document.getElementById('productDescription').value.trim(),
+                image: selectedImage
+            };
+
+            // Save to localStorage
+            let products = JSON.parse(localStorage.getItem('lollipopProducts') || '[]');
+            const newId = (products.length + 1).toString().padStart(3, '0');
+            products.push({ id: newId, ...productData });
+            localStorage.setItem('lollipopProducts', JSON.stringify(products));
+
+            // Show success message and redirect
+            alert('Product added successfully!');
+            window.location.href = 'index.html';
+        });
+
+        // Click handler for upload area
+        document.getElementById('uploadArea').addEventListener('click', function(e) {
+            if (e.target.id !== 'imageInput' && !e.target.closest('button')) {
+                document.getElementById('imageInput').click();
+            }
+        });
+    </script>
+</body>
+</html>

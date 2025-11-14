@@ -1,0 +1,151 @@
+PAGES
+-------
+>Cart 
+>login 
+>sign up
+>Accessories
+>wishlist
+>PC components
+>Consoles
+>Nintendo 
+>Play station
+>Xbox
+>About Us
+>add product page (admin page
+>product management page (admin side)
+
+>index com
+
+
+SLIDESHOW
+-------------
+>rainworld
+>life is strange
+>borderlands 4 super deluxe edition
+>oxenfree
+>cult of the lamb
+>ori and the blind forest
+
+
+>the last of us
+>halo
+>assasins creed
+>spiderman
+>call of duty
+>lil nightmare iii
+>davy x jones
+>no mans sky
+
+INDEX 
+----------
+>navigation bar 
+>slideshow 
+>shop by platform
+>Best Sellers 
+>upcoming 
+>new arrivals
+>special offers
+>gift cards? preorder?
+
+LOGIN PAGE
+----------
+>name
+>Password 
+>create an account
+
+SIGNUP
+-------
+>name 
+>email 
+>Password 
+>confirm password
+
+ABOUT US 
+---------
+>what we offer 
+>faqs
+>payment offers and contact info
+//background picture of a game
+
+NINTENDO
+----------
+The Elders scroll
+Mario..
+The witcher
+mortal kombat...
+street fighter ..
+lego batman...
+naraka:bladepoint...
+tekken 8...
+
+>Halo
+
+THEME COLOR
+-----------------
+>gold, yellow and black
+
+//glow horizontal neon line at end section of homepage
+
+WAYS TO PAY
+------------------
+Phonepe
+paytm
+gpay
+upi
+VISA
+mastercard
+amazonpay
+blue dart
+DEHLIVERY
+Shiprocket
+xpressBees
+
+https://icons8.com/icon/OYtBxIlJwMGA/phone-pe
+<a target="_blank" href="https://icons8.com/icon/OYtBxIlJwMGA/phone-pe">Phone Pe</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icon/5L3mKKshbyOf/visa">Visa</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+
+Main Page
+--------------
+>Best Sellers
+>New Arrivals
+>on-sale
+>preorder
+>shop for games by platform
+
+NAV BAR
+------------
+>Games
+>Consoles
+>Accesories
+>Gift cards
+>PC components
+>Preorder
+
+>wishlist
+>cart
+>login
+>name
+
+*separate page for computer accesories
+Computer parts
+>gaming pads
+>xboxes
+>ps'
+>switches
+>system unit
+
+*black and white theme?
+	>white and green
+	>black & gold/yellow
+
+<a target="_blank" href="https://icons8.com/icon/DZe3wFKTc8IK/search">Search</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icon/DZe3wFKTc8IK/search">Search</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icon/CE7rP-35_XQR/shopping-cart">Cart</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icon/ldYAIOBZuEdB/shopping-cart">Cart</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icon/95101/person">Person</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icon/53TQ8096ZRdz/heart">Heart</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icon/53TQ8096ZRdz/heart">Heart</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+#707070
+
+*When siging up, there is gold neon line that stretches up according to number of steps taken
